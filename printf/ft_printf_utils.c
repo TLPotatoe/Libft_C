@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 15:45:26 by tlamit            #+#    #+#             */
-/*   Updated: 2025/11/20 18:13:45 by tlamit           ###   ########.fr       */
+/*   Updated: 2025/11/20 23:15:10 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	count_args_n(const char *s)
 	int	i;
 
 	i = 0;
+	if (!*s)
+		return (-1);
 	while (*s && *(s + 1))
 	{
 		if (*s == '%')
@@ -66,6 +68,8 @@ void	handle_pointer(unsigned long int addr, int *i)
 
 void	handle_type(const char *s, va_list arglist, int *i)
 {
+	if (!*s)
+		return ;	
 	if (s[1] == 'c')
 		printf_ft_putchar_fd(va_arg(arglist, int), 1, i);
 	else if (s[1] == 's')
