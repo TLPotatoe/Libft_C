@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 20:52:14 by tlamit            #+#    #+#             */
-/*   Updated: 2025/11/20 18:08:04 by tlamit           ###   ########.fr       */
+/*   Updated: 2025/11/21 16:27:58 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,17 @@ static void	freeall(char **mbuff, char **tbuff)
 	*tbuff = NULL;
 }
 
+static int	ft_strlen_gnl(char *s)
+{
+	int	i;
+
+	if (!s)
+		return (-1);
+	while (s[i])
+		i++;
+	return (i);
+}
+
 char	*get_next_line(int fd)
 {
 	static char	*mbuff[4096];
@@ -63,7 +74,7 @@ char	*get_next_line(int fd)
 	while (!ft_strchr(mbuff[fd], '\n'))
 	{
 		len = reader(fd, &tbuff);
-		if (len == -1 || (!(gnl_ft_strchr(mbuff[fd], 0) - mbuff[fd]) && len <= 0))
+		if (len == -1 || (!ft_strlen_gnl(mbuff[fd]) && len <= 0))
 		{
 			freeall(&(mbuff[fd]), &tbuff);
 			return (NULL);

@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:03:24 by tlamit            #+#    #+#             */
-/*   Updated: 2025/11/20 18:10:31 by tlamit           ###   ########.fr       */
+/*   Updated: 2025/11/21 15:41:49 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,3 @@ char	*printf_ft_substr(char const *s, unsigned int start, size_t len)
 	printf_ft_strlcpy(sub, s + start, sub_len + 1);
 	return (sub);
 }
-

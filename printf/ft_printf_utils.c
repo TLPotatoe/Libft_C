@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 15:45:26 by tlamit            #+#    #+#             */
-/*   Updated: 2025/11/20 23:15:10 by tlamit           ###   ########.fr       */
+/*   Updated: 2025/11/21 15:35:28 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	handle_pointer(unsigned long int addr, int *i)
 void	handle_type(const char *s, va_list arglist, int *i)
 {
 	if (!*s)
-		return ;	
+		return ;
 	if (s[1] == 'c')
 		printf_ft_putchar_fd(va_arg(arglist, int), 1, i);
 	else if (s[1] == 's')
