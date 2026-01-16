@@ -6,15 +6,15 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 12:09:55 by tlamit            #+#    #+#             */
-/*   Updated: 2025/11/20 17:31:46 by tlamit           ###   ########.fr       */
+/*   Updated: 2025/11/21 23:04:07 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include "ft_printf/ft_printf.h"
 # include "get_next_line/get_next_line.h"
-# include "printf/ft_printf.h"
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -29,6 +29,12 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+int					ft_isalnum(int c);
+int					ft_isalpha(int c);
+int					ft_isascii(int c);
+int					ft_isdigit(int c);
+int					ft_isprint(int c);
 
 void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstadd_front(t_list **lst, t_list *new);
@@ -55,12 +61,16 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr_fd(char *s, int fd);
 
 int					ft_atoi(const char *nptr);
+int					get_size_m(int nb);
 char				*ft_itoa(int n);
+int					count_words(char const *s, char c);
+char				**ft_checksplit(char **p, int n);
 char				**ft_split(char const *s, char c);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strdup(const char *s);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
+unsigned int		get_result(char *dst, char *src, size_t size);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlen(const char *s);
