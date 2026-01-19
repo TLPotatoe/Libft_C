@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:57:09 by tlamit            #+#    #+#             */
-/*   Updated: 2025/10/16 14:44:50 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/01/19 16:39:07 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
+	if (!s1 || !s2)
+		return (-1);
 	if (!n)
 		return (0);
 	while (*s1 == *s2 && --n && *s1 && *s2)

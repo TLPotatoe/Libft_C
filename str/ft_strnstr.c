@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:12:26 by tlamit            #+#    #+#             */
-/*   Updated: 2025/10/22 18:07:56 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/01/19 16:39:28 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 
+	if (!big || !little)
+		return (NULL);
 	if (*little == 0)
 		return ((char *)big);
 	while (*big && len--)

@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 11:30:37 by tlamit            #+#    #+#             */
-/*   Updated: 2025/10/23 13:06:51 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/01/19 16:40:25 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t			j;
 	unsigned int	res;
 
+	if (!dst || !src)
+		return (0);
 	if (!size)
 		return (ft_strlen(src));
 	res = get_result(dst, (char *)src, size);

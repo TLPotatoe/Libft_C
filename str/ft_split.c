@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 14:24:31 by marvin            #+#    #+#             */
-/*   Updated: 2025/10/23 13:25:30 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/01/19 16:41:39 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	count_words(char const *s, char c)
 	int	word;
 	int	flag;
 
+	if (!s)
+		return (-1);
 	word = 0;
 	flag = 1;
 	while (*s)
@@ -44,6 +46,8 @@ char	**ft_checksplit(char **p, int n)
 {
 	int	i;
 
+	if (!p)
+		return (NULL);
 	i = 0;
 	while (p[i] && i != n)
 		i++;

@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:45:54 by tlamit            #+#    #+#             */
-/*   Updated: 2025/10/20 10:33:25 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/01/19 16:37:05 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_atoi(const char *nptr)
 	int	sign;
 	int	result;
 
+	if (!nptr)
+		return (-1);
 	sign = 1;
 	result = 0;
 	while ((9 <= *nptr && *nptr <= 13) || *nptr == 32)

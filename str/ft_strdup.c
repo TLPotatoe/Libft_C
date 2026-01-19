@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 12:11:46 by tlamit            #+#    #+#             */
-/*   Updated: 2025/10/20 10:32:42 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/01/19 16:40:11 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *s)
 	int		len;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
 	dup = malloc(len + 1);

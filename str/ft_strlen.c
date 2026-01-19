@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 14:24:40 by tlamit            #+#    #+#             */
-/*   Updated: 2025/10/15 11:39:08 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/01/19 16:40:36 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	ft_strlen(const char *s)
 {
 	int	i;
 
+	if (!s)
+		return (0);
 	i = 0;
 	while (s[i])
 		i++;

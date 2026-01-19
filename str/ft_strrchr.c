@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:09:39 by tlamit            #+#    #+#             */
-/*   Updated: 2025/10/22 17:58:25 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/01/19 16:40:56 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strrchr(const char *s, int c)
 {
 	char	*last_p;
 
+	if (!s)
+		return (NULL);
 	last_p = NULL;
 	while (*s)
 	{
