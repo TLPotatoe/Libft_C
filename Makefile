@@ -6,7 +6,7 @@
 #    By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 14:16:18 by fmurat--          #+#    #+#              #
-#    Updated: 2025/12/16 15:24:04 by tlamit           ###   ########.fr        #
+#    Updated: 2026/01/20 14:48:35 by tlamit           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,13 +14,15 @@ CC = cc
 
 NAME = libft.a
 
-HEADER = -I. -I get_next_line -I ft_printf
+HEADER = -I. -I get_next_line -I ft_printf -I reader
 
 ifndef DEBUG
 	CFLAGS = -Wall -Wextra -Werror -g $(HEADER)
 else
 	CFLAGS = -g $(HEADER)
 endif
+
+SRCS_READER = reader/reader.c
 
 SRCS_GNL = get_next_line/get_next_line.c \
 		   get_next_line/get_next_line_utils.c
@@ -83,7 +85,8 @@ SRCS_STR = str/ft_atoi.c \
 		   str/ft_toupper.c
 
 
-SRCS = $(SRCS_GNL) \
+SRCS = 	$(SRCS_READER) \
+		$(SRCS_GNL) \
 		$(SRCS_PRINTF) \
 		$(SRCS_IS) \
 		$(SRCS_LST) \

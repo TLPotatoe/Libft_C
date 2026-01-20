@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 12:09:55 by tlamit            #+#    #+#             */
-/*   Updated: 2025/11/21 23:04:07 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/01/20 14:47:28 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "ft_printf/ft_printf.h"
 # include "get_next_line/get_next_line.h"
+# include "reader/reader.h"
 # include <stdlib.h>
 # include <unistd.h>
 
