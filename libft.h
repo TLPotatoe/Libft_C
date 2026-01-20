@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 12:09:55 by tlamit            #+#    #+#             */
-/*   Updated: 2026/01/20 14:47:28 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/01/20 17:46:23 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "get_next_line/get_next_line.h"
 # include "reader/reader.h"
 # include <stdlib.h>
+# include <string.h>
 # include <unistd.h>
 
 int					ft_isalnum(int c);
@@ -84,5 +85,7 @@ char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+
+void				ft_remchr(char *s, char *char_list);
 
 #endif
