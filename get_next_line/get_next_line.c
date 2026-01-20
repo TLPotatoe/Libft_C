@@ -6,13 +6,13 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 20:52:14 by tlamit            #+#    #+#             */
-/*   Updated: 2025/11/20 18:08:34 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/01/20 14:29:31 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static char	*extract_line(char **mbuff)
+char	*extract_line(char **mbuff)
 {
 	size_t	len;
 	char	*temp;
