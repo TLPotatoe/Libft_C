@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 01:28:03 by tlamit            #+#    #+#             */
-/*   Updated: 2026/01/29 01:42:36 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/01/29 01:46:05 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_strreplace(char *source, char *to_replace, char replace_by)
 	ft_memset(seen, 0, sizeof seen);
 	while (*to_replace)
 		seen[(int)*(to_replace++)] = 1;
-	while (source)
+	while (*source)
 	{
 		if (seen[(int)(*source)])
 			*source = replace_by;
