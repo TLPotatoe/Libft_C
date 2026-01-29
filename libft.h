@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 12:09:55 by tlamit            #+#    #+#             */
-/*   Updated: 2026/01/20 17:46:23 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/01/29 01:39:10 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,7 @@ int					ft_tolower(int c);
 int					ft_toupper(int c);
 
 void				ft_remchr(char *s, char *char_list);
+void				ft_strreplace(char *source, char *to_replace,
+						char replace_by);
 
 #endif
